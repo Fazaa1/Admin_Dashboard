@@ -1,8 +1,8 @@
 @extends('template.master')
 
 
-@section('title-page', 'Form')
 @section('Content')
+@section('title-page', 'Form')
 
 <div class="row">
   <!-- left column -->

@@ -40,19 +40,15 @@
         <!-- HEADER DESKTOP-->
       @include('template.separate.navbar')
 
-        <!-- PAGE CONTENT-->
-     @yield('template.separate.content')
-        <!-- END PAGE CONTENT  -->
-
-        <!-- Sidebar Star -->
-    @include('template.separate.sidebar')
-        <!-- End Sidebar  -->
-
-        <!-- Footer -->
-        @include('template.separate.footer')
-        <!-- End Footer -->
-     @yield('Content')
-
+      
+      <!-- Sidebar Star -->
+      @include('template.separate.sidebar')
+      <!-- End Sidebar  -->
+      
+      <!-- PAGE CONTENT-->
+   @include('template.separate.content')
+      <!-- END PAGE CONTENT  -->
+      
     </div>
 
     <!-- Jquery JS-->

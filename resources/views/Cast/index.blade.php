@@ -1,8 +1,6 @@
 @extends('template.master')
-
-
-@section('title-page', 'Form')
 @section('Content')
+@section('title-page', 'Form')
 
 <div class="main-content">
     <div class="section_content section_content--p30">
