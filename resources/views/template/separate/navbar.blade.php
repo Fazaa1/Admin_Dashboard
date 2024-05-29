@@ -119,7 +119,7 @@
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
-                                            <img src="{{asset('CoolAdmin/images/icon/avatar-01.jpg')}}" alt="John Doe" />
+                                            <img src="{{asset('CoolAdmin/images/icon/avatar01.jpg')}}" alt="John Doe" />
                                         </div>
                                         <div class="content">
                                             <a class="js-acc-btn" href="#">john doe</a>
@@ -160,4 +160,5 @@
                     </div>
                 </div>
             </header>
+            
             <!-- HEADER DESKTOP-->

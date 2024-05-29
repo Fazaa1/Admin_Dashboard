@@ -15,8 +15,9 @@ return new class extends Migration
             //
             $table->dropColumn('email_verified_at');
             $table->dropColumn('remember_token');
-            $table->foreignId('role_id')->references('id')->on('roles')->onDelete('cascade')->after('id');
-            $table->foreignId('profile_id')->references('id')->on('roles')->onDelete('cascade')->after('id');
+            $table->foreignId('role_id')->references('id')->on('roles')->onDelete('cascade');
+            $table->foreignId('profile_id')->references('id')->on('profiles')->onDelete('cascade');
+        
         });
     }
 
@@ -26,10 +27,10 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            //
-            $table->dropColumn('email_verified_at');
-            $table->dropColumn('remember_token');
-            $table->foreignId('role_id')->references('id')->on('roles')->onDelete('cascade')->after('id');
+            $table->timestamp('email_verified_at')->nullable();
+            $table->rememberToken();
+            $table->dropColumn('role_id');
+            $table->dropColumn('profile_id');
         });
     }
 };

@@ -42,7 +42,7 @@ Route::controller(RegisterController::class)->group(function () {
 
 Route::controller(DashboardController::class)->group(function () {
     Route::get('/dashboard/user', 'user')->name('dashboard.user');
-    Route::POST('/dashboard/admin', 'admin')->name('dashboard.admin');
+    Route::post('/dashboard/admin', 'admin')->name('dashboard.admin');
 });
 
 Route::controller(GenreController::class)->group(function () {

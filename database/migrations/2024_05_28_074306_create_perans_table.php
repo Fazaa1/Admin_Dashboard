@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-
-        Schema::create('profiles', function (Blueprint $table) {
+        Schema::create('perans', function (Blueprint $table) {
             $table->id();
-            $table->integer('umur');
-            $table->text('bio');
-            $table->text('alamat');
-            // $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('film_id')->constrained();
+            $table->foreignId('casts_id')->constrained();
+            $table->String('nama',45);
             $table->timestamps();
+
         });
     }
 
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('profiles');
+        Schema::dropIfExists('perans');
     }
 };

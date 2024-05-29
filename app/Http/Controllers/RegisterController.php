@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreAuthRequest;
 use Illuminate\Http\Request;
-use App\Models\Profile;
-use App\Models\User;
+use App\Http\Requests\StoreRegisterRequest;
+use Illuminate\Support\Facades\Hash;
+use App\Models\{
+    User,
+    Profile,
+};
 
 
 class RegisterController extends Controller

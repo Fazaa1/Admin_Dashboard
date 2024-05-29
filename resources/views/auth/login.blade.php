@@ -1,7 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> CoolAdmin | Registration Page (v2)</title>
+
+  <head>
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,7 +39,6 @@
     <link href="{{asset('CoolAdmin/css/theme.css')}}" rel="stylesheet" media="all">
 
 </head>
-
 <body class="hold-transition login-page">
 <div class="login-box">
   @if ($message = Session::get('success'))
@@ -99,51 +103,3 @@
   <!-- /.card -->
 </div>
 <!-- /.login-box -->
-<body class="animsition">
-    <div class="page-wrapper">
-        <!-- HEADER DESKTOP-->
-      @include('template.separate.navbar')
-
-        <!-- PAGE CONTENT-->
-     @yield('template.separate.content')
-        <!-- END PAGE CONTENT  -->
-
-        <!-- Sidebar Star -->
-    @include('template.separate.sidebar')
-        <!-- End Sidebar  -->
-
-        <!-- Footer -->
-        @include('template.separate.footer')
-        <!-- End Footer -->
-     @yield('Content')
-
-    </div>
-
-    <!-- Jquery JS-->
-    <script src="{{asset('CoolAdmin/vendor/jquery-3.2.1.min.js')}}"></script>
-    <!-- Bootstrap JS-->
-    <script src="{{asset('CoolAdmin/vendor/bootstrap-4.1/poppe')}}r.min.js"></script>
-    <script src="{{asset('CoolAdmin/vendor/bootstrap-4.1/boots')}}trap.min.js"></script>
-    <script src="{{asset('CoolAdmin/vendor/slick/slick.min.js')}}">
-    </script>
-    <script src="{{asset('CoolAdmin/vendor/animsition/animsition.min.js')}}"></script>
-    <script src="{{asset('CoolAdmin/vendor/animsition/animsiti')}}on.min.js"></s>
-    <script src="{{asset('CoolAdmin/vendor/bootstrap-progressb')}}ar/bootstrap-progressbar.min.js">
-    </script>
-    <script src="{{asset('CoolAdmin/vendor/counter-up/jquery.w')}}aypoints.min.js"></script>
-    <script src="{{asset('CoolAdmin/vendor/counter-up/jquery.c')}}ounterup.min.js">
-    </script>
-    <script src="{{asset('CoolAdmin/vendor/circle-progress/cir')}}cle-progress.min.js"></script>
-    <script src="{{asset('CoolAdmin/vendor/perfect-scrollbar/p')}}erfect-scrollbar.js"></script>
-    <script src="{{asset('CoolAdmin/vendor/chartjs/Chart.bundl')}}e.min.js"></script>
-    <script src="{{asset('CoolAdmin/vendor/select2/select2.min')}}.js">
-    </script>
-
-    <!-- Main JS-->
-    <script src="{{asset('CoolAdmin/js/main.js')}}"></script>
-
-</body>
-
-</html>
-<!-- end document-->
-

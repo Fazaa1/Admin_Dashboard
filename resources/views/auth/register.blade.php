@@ -1,28 +1,12 @@
-Catatan sesuaikan asset URL dengan project masing-masing
+@extends('template.master')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Registration Page (v2)</title>
 
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ asset('template/plugins/fontawesome-free/css/all.min.css') }}">
-  <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="{{ asset('template/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset('template/dist/css/adminlte.min.css') }}">
-</head>
-<body class="hold-transition register-page">
-<div class="register-box">
-  <div class="card card-outline card-primary">
-    <div class="card-header text-center">
-      <a href="#" class="h1"><b>Admin</b>LTE</a>
-    </div>
-    <div class="card-body">
+@section('Content')
+@section('title-page', 'Form')
+
+
+
+<div class="card-body">
       <p class="login-box-msg">Register a new membership</p>
       <form action="{{ route('register.store') }}" method="post">
         @csrf
@@ -109,20 +93,12 @@ Catatan sesuaikan asset URL dengan project masing-masing
           <!-- /.col -->
         </div>
       </form>
-      <a href="login.html" class="text-center">Saya Telah memiliki akun</a>
+      <a href="{{asset('CoolAdmin/login.html')}}" class="text-center">Saya Telah memiliki akun</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->
 </div>
 <!-- /.register-box -->
 
-<!-- jQuery -->
-<script src="{{ asset('template/plugins/jquery/jquery.min.js') }}"></script>
-<!-- Bootstrap 4 -->
-<script src="{{ asset('template/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<!-- AdminLTE App -->
-<script src="{{ asset('template/dist/js/adminlte.min.js') }}"></script>
-</body>
-</html>
-
+@endsection
 
