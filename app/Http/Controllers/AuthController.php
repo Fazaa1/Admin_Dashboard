@@ -19,9 +19,7 @@ class AuthController extends Controller
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password]))
         {
             $request->session()->regenerate();
-            if (auth()->user()->role_id ==1)
-            { return redirect()->route('dashboard.user'); }  else
-            { return redirect()->route('dashboard.admin'); }          
+           return view('dashboard.user');          
         }
         return back()->withErrors([
             'notif' => 'credential do not match our records',
@@ -32,6 +30,6 @@ class AuthController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('login.login')->withSuccess('Anda Telah Keluar Dari Sistem');
+        return redirect()->route('auth.login')->withSuccess('Anda Telah Keluar Dari Sistem');
 }
 }

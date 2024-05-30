@@ -93,7 +93,7 @@
           <!-- /.col -->
         </div>
       </form>
-      <a href="{{asset('CoolAdmin/login.html')}}" class="text-center">Saya Telah memiliki akun</a>
+      <a href="{{route('login.login')}}" class="text-center">Saya Telah memiliki akun</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->

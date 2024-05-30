@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> CoolAdmin | Registration Page (v2)</title>
+  <title> CoolAdmin |  Login Page </title>
 
   <head>
     <!-- Required meta tags-->
@@ -57,7 +57,7 @@
       @error('notif')
         <p class="login-box-msg error invalid-feedback" style="display: inline;">{{ $message }}</p>
       @enderror
-      <form action="{{ route('login.authenticate') }}" method="post">
+      <form action="{{ route('auth.authenticate') }}" method="post">
         @csrf
         <div class="input-group mb-3">
           <input type="email" class="form-control @error('email') is-invalid @enderror" placeholder="Email" name="email" value="{{ @old('email') }}">

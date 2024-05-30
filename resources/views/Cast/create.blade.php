@@ -14,7 +14,7 @@
       </div>
       <!-- /.card-header -->
       <!-- form start -->
-      <form action="{{ route('cast.store') }}" method="POST">
+      <form action="{{ route('cast.store') }}" method="get">
         @csrf
         <div class="card-body">
           <div class="form-group">
